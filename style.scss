@@ -223,17 +223,20 @@
   background-color: #ddd;
 
   display: grid;
-  grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: repeat(2, 150px);
+  // grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 
   grid-auto-rows: 80px;
+
   grid-auto-flow: row dense;
   grid-auto-columns: 0.5fr;
 
-  // Align grid items to grid areas
+  //  Align grid items to grid areas
   // align-items: center;
-  // justify-items: start;
+  // justify-items: center;
+
+  // Align grid tracks to grid container
 
   grid-template-rows: repeat(2, 100px);
   grid-template-columns: repeat(2, 200px);
@@ -243,6 +246,7 @@
 
   align-content: center;
 }
+
 .new-item {
   padding: 10px;
   color: white;
@@ -265,4 +269,59 @@
 .new-item--7 {
   background-color: palevioletred;
   grid-column: 1 / -1;
+}
+
+.new-container-2 {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+  // Using min-content and max-content
+  // grid-template-rows: repeat(2, 150px);
+  // grid-template-columns: max-content 1fr 1fr min-content;
+  // grid-template-rows: repeat(2, min-content);
+  width: 90%;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+}
+
+.new-item-2 {
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  background-color: orangered;
+}
+
+.new-item-2--1 {
+  background-color: orangered;
+}
+
+.new-item-2--2 {
+  background-color: yellowgreen;
+}
+
+.new-item-2--3 {
+  background-color: blueviolet;
+}
+
+.new-item-2--4 {
+  background-color: palevioletred;
+}
+
+.new-item-2--5 {
+  background-color: royalblue;
+}
+
+.new-item-2--6 {
+  background-color: goldenrod;
+}
+
+.new-item-2--7 {
+  background-color: crimson;
+}
+
+.new-item-2--8 {
+  background-color: darkslategray;
 }
